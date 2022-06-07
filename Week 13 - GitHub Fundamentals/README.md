@@ -3,18 +3,25 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Cybersecurity/'Week 13 - GitHub Fundamentals'/Images/Network_Diagram.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Images/Network_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  Ansible Config
-  Ansible Hosts
-  Filebeat Config
-  Filebeat playbook
-  Install Elk
-  Metricbeat Config
-  Metricbeat playbook
-  Pentest playbook
+  [Ansible Config](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/ansible.cfg)
+  
+  [Ansible Hosts](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/hosts)
+  
+  [Filebeat Config](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/filebeat-config.yml)
+  
+  [Filebeat playbook](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/filebeat-playbook.yml)
+  
+  [Install Elk](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/install-elk.yml)
+  
+  [Metricbeat Config](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/metricbeat-config.yml)
+  
+  [Metricbeat playbook](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/metricbeat-playbook.yml)
+  
+  [Pentest playbook](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Ansible/pentest.yml)
 
 This document contains the following details:
 - Description of the Topology
