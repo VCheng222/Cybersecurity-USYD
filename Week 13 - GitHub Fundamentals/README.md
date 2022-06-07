@@ -3,7 +3,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Images/Network_Diagram.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Diagrams/Network-Topology.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -47,7 +47,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat collects metric data from severs and services.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function  | IP Address | Operating System |
 |----------|-----------|------------|------------------|
@@ -83,36 +82,39 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - Installation of docker.io
-   #Install docker with apt
+```#Install docker with apt
     - name: Install docker.io
       apt:
         update_cache: yes
         force_apt_get: yes
         name: docker.io
         state: present
+ ```
 - Increase virtual memory
-   #Use command module
+```#Use command module
     - name: Increase virtual memory
       command: sysctl -w vm.max_map_count=262144
+```
 - Download and launch a docker elk container
-   #Use docker_containter module
+```#Use docker_containter module
     - name: download and launch a docker elk container
       docker_container:
          name: elk
          image: sebp/elk:761
          state: started
          restart_policy: always
+```
 - Enable docker server on boot
-   #Use systemd module
+```#Use systemd module
     - name: Enable service docker on boot
       systemd:
           name: docker
           enabled: yes
-
+```
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-Cybersecurity/'Week 13 - GitHub Fundamentals'/Images/docker_ps_output.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2013%20-%20GitHub%20Fundamentals/Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -134,7 +136,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml and metricbeat-config.yml file to /etc/ansible/files.
 - Update the ansible hosts file to include webservers and elk server
-    - *NOTE* webserver is where beats are installed, elk server is where beats are analysed
+    - **NOTE:** webserver is where beats are installed, elk server is where beats are analysed
 - Run the playbooks using the following commands:
     - ansible-playbook filebeat-playbook.yml
     - ansible-playbook metricbeat-playbook.yml
