@@ -19,13 +19,29 @@ Answer the following questions about the HTTP request and response process.
 
 1. What type of architecture does the HTTP request and response process occur in?
 
+HTTP is a request and resonse process that occurs on a client and server based architecture
+
 2. What are the different parts of an HTTP request? 
+
+HTTP request are divided into 3 parts:
++ Request Line
++ Header
++ Body
 
 3. Which part of an HTTP request is optional?
 
+The body part of HTTP request is optional.
+
 4. What are the three parts of an HTTP response?
 
+HTTP reponse is also depicted into 3 parts, these are:
+- Status line
+- Header
+- Body
+
 5. Which number class of status codes represents errors?
+
+HTTP status codes in the fourth class represents prepresents client errors, for example code 404 Not Found. HTTP status codes in the fifth class represent server errors, for example code 503 Service Unavaliable.
 
 6. What are the two most common request methods that a security professional will encounter?
 
