@@ -396,9 +396,15 @@ For these "baselining" steps, you'll want to log into two different types of acc
 
 1. Using your browser, log into your WordPress site as your sysadmin account and navigate to `localhost:8080/wp-admin/users.php`, where we previously created the user Ryan. Examine this page briefly. Log out.
 
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2014%20-%20Web%20Development/Images/Amanda-users.php.png)
+
 2. Using your browser, log into your Ryan account and attempt to navigate to `localhost:8080/wp-admin/index.php`. Note the wording on your Dashboard.
 
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2014%20-%20Web%20Development/Images/Ryan-index.png)
+
 3. Attempt to navigate to `localhost:8080/wp-admin/users.php`. Note what you see now.
+
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2014%20-%20Web%20Development/Images/Ryan-user.php.png)
 
 Log out in the browser.
 
