@@ -7,7 +7,7 @@
 
 Using the Google Dorking technique I was able to identify who the Chief Executive Officer of Altoro Mutual in reference to the web site `demo.testfire.net`. By inputting the following command, _site:demo.testfire.net intext:chief_ into the Google search bar. This showed that Karl Fitsgerald is the Chairman & Chief Executive Officer of Altoro Mutual.
 
-IMAGE1
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Google%20Dorking.png)
 
 This was further confirmed by clicking on the first link from search results <http://demo.testfire.net/index.jsp?content=inside_executives.htm>. This site was able to not only display who the Chief Executive Officer is but also others who play an important role within the organization.
 
@@ -24,24 +24,33 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 The company is located at *Sunnyvale, CA, 94085, US*.
 
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Company%20Location.png)
+
   2. What is the NetRange IP address:
 
 The NetRange is 65.61.137.64 - 65.61.137.127
+
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/NetRange.png)
 
   3. What is the company they use to store their infrastructure:
 
 The company that stores their infrastructure is Rackspace Backbone Engineering.
 
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Rackspace%20Backbone%20Engineering.png)
 
   4. What is the IP address of the DNS server:
 
 65.61.137.117
+
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/DNS.png)
 
 #### Step 3: Shodan
 
 - What open ports and running services did Shodan find:
 
 By scanning the IP address 65.61.137.117 against Shodan it was evident that Ports 80 and 443 are open.
+
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Shodan.png)
 
 #### Step 4: Recon-ng
 
@@ -51,6 +60,7 @@ To install the module `xssed` into my Recon-ng the following command was used:
 ```
 marketplace install xssed
 ```
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/xssed.png)
 
 - Set the source to `demo.testfire.net`. 
 
@@ -62,6 +72,7 @@ After doing so, am I able to set the source to `demo.testfire.net`. This is done
 ```
 options set SOURCE demo.testfire.net
 ```
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Recon-ng_module_load.png)
 
 - Run the module. 
 
@@ -70,6 +81,8 @@ To run the module a simple command is needed:
 run
 ```
 
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Recon-ng_run.png)
+
 Is Altoro Mutual vulnerable to XSS: 
 
 To double check that the website `demo.testfire.net` is vulnerable to XSS the following command was entered into the search bar.
@@ -77,7 +90,7 @@ To double check that the website `demo.testfire.net` is vulnerable to XSS the fo
 ```
 <script>("Vulnerable")</script>
 ```
-IMAGE
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/XSS.png)
 
 The image shows that website is indeed vulnerable as I was able to successfully able to run a script in the search bar.
 
@@ -90,12 +103,14 @@ Your client has asked that you help identify any vulnerabilities with their file
 ```
 nmap -T4 -F 192.168.0.10
 ```
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Zenmap_1.png)
 
 - Bonus command to output results into a new text file named `zenmapscan.txt`:
 ```
 nmap -T4 -F -oN zenmapscan.txt 192.168.0.10
 ```
-
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Zenmap_2.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/zenmapscan.txt.png)
 - Zenmap vulnerability script command: 
 
 From the previous command it is shown that `Ports 139` and `445` were open. The following command was used in Zenmap to determine the vulnerability associated with `Ports 139` and `445`.
@@ -103,7 +118,9 @@ From the previous command it is shown that `Ports 139` and `445` were open. The 
 ```
 nmap -T4 -F --script ftp-vsftpd-backdoor,smb-enum-services 192.168.0.10
 ```
-
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Zenmap_3.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Zenmap_4.png)
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Zenmap_5.png)
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability:
 
