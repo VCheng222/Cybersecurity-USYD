@@ -81,7 +81,7 @@ To run the module a simple command is needed:
 run
 ```
 
-![](
+![](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2016%20-%20Penetration%20Testing%201/Images/Recon-ng_run.png)
 
 Is Altoro Mutual vulnerable to XSS: 
 
