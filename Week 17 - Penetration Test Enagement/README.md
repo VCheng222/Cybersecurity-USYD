@@ -48,7 +48,7 @@ For this week's homework, please use the following VM setup:
 
 Once you complete this assignment, submit your findings in the following document: 
 
-- [Report.docx]([Resources/Report.docx](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2017%20-%20Penetration%20Test%20Enagement/Report.pdf)
+- [Report.docx]([Resources/Report.docx](https://github.com/VCheng222/Cybersecurity-USYD/blob/main/Week%2017%20-%20Penetration%20Test%20Enagement/Report.pdf))
  
 ### Instructions
 
